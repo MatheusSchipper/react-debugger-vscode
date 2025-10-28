@@ -1,0 +1,76 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "React App - Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/application/src",
+      "sourceMaps": true,
+      "preLaunchTask": "npm: start",
+      "runtimeArgs": [
+        "--remote-debugging-port=9222",
+        "--disable-web-security",
+        "--user-data-dir=/tmp/vscode-chrome-debug-${workspaceFolderBasename}"
+      ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**/*.js",
+        "${workspaceFolder}/application/node_modules/**/*.js"
+      ],
+      "smartStep": true,
+      "trace": true
+    },
+    {
+      "name": "React App - Edge",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/application/src",
+      "sourceMaps": true,
+      "preLaunchTask": "npm: start",
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**/*.js",
+        "${workspaceFolder}/application/node_modules/**/*.js"
+      ],
+      "smartStep": true
+    },
+    {
+      "name": "Attach to Chrome",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}/application/src",
+      "sourceMaps": true,
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**/*.js",
+        "${workspaceFolder}/application/node_modules/**/*.js"
+      ]
+    },
+    {
+      "name": "React Debug (Manual Start)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/application/src",
+      "sourceMaps": true,
+      "runtimeArgs": [
+        "--remote-debugging-port=9222",
+        "--disable-web-security",
+        "--user-data-dir=/tmp/vscode-chrome-debug-manual-${workspaceFolderBasename}"
+      ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**/*.js",
+        "${workspaceFolder}/application/node_modules/**/*.js"
+      ],
+      "smartStep": true
+    }
+  ]
+}

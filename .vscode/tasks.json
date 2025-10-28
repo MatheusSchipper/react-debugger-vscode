@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start",
+      "group": "build",
+      "label": "npm: start",
+      "detail": "react-scripts --openssl-legacy-provider start",
+      "options": {
+        "cwd": "${workspaceFolder}/application"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "webpack",
+        "pattern": {
+          "regexp": "."
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": {
+            "regexp": "(webpack|react-scripts).*compiling"
+          },
+          "endsPattern": {
+            "regexp": "webpack.*compiled|compiled successfully|Local:.*http://localhost:3000"
+          }
+        }
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Start React Dev Server",
+      "command": "npm",
+      "args": ["start"],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/application"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "webpack",
+        "pattern": {
+          "regexp": "."
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": {
+            "regexp": "(webpack|react-scripts).*compiling"
+          },
+          "endsPattern": {
+            "regexp": "webpack.*compiled|compiled successfully|Local:.*http://localhost:3000"
+          }
+        }
+      }
+    }
+  ]
+}
